@@ -1,16 +1,12 @@
 import React from 'react';
 // Route object used to define a match between a URL and a component
+// IndexRoute is a helper for a component that is shown with the parent route
 import { Route, IndexRoute } from 'react-router';
 import App from './components/app';
-
-const Greeting = () => {
-  return <div>Route Test</div>;
-};
+import PostsIndex from './components/posts_index';
 
 export default (
 	<Route path="/" component={App}>
-    <Route path="greet" component={Greeting} />
-    <Route path="greet2" component={Greeting} />
-    <Route path="greet3" component={Greeting} />
+    <IndexRoute component={PostsIndex} />
   </Route>
 );
